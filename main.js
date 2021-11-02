@@ -56,7 +56,7 @@ if (!fssync.existsSync("content")) fssync.mkdirSync("content");
         }
     });
 
-    const { username, password } = require('./creds.json');
+    const { username, password } = process.env
 
     app.post("/handle_login", (req, res) => {
         if (req.body.username)  {
