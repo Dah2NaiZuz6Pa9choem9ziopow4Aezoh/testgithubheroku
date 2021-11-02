@@ -7,6 +7,8 @@ const session = require('express-session');
 const app = express();
 const formidable = require('formidable');
 
+const port = process.env.PORT || 5000;
+
 app.set('views', path.join(
     __dirname, 'views'
 ));
@@ -168,6 +170,6 @@ if (!fssync.existsSync("content")) fssync.mkdirSync("content");
         }
     })
 
-    await new Promise(r => app.listen(5000, r));
+    await new Promise(r => app.listen(port, r));
     console.log("Ready");
 })();
