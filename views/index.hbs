@@ -1,0 +1,13 @@
+<div class="app-holder">
+<nav>
+    <a href="/">Upload</a>
+    <a href="/files">File Manager</a>
+</nav>
+<main class="file-uploader">
+    <h1>Przesyłanie plików</h1>
+    <form action="/upload" method="POST" enctype="multipart/form-data">
+        <input type="file" multiple name="files">
+        <input type="submit" value="Prześlij">
+    </form>
+</main>
+</div>

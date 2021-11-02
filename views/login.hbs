@@ -1,0 +1,13 @@
+<main class="login-page">
+    {{#if error}}
+    <div class="login-error">
+        {{error}}
+        </div>
+    {{/if}}
+<h1>Proszę się zalogować</h1>
+<form action="/handle_login" method="POST">
+<p>Nazwa użytkownika</p><input type="text" name="username"><br/>
+<p>Hasło</p><input type="password" name="password"><br/>
+<input type="submit" value="Zaloguj się">
+</form>
+</main>

@@ -1,0 +1,39 @@
+<div class="app-holder">
+<nav>
+    <a href="/">Upload</a>
+    <a href="/files">File Manager</a>
+</nav>
+<main class="file-manager">
+    <div class="reset-button-holder">
+        <a href="/reset">Wykonaj reset</a>
+    </div>
+    <div class="scrolling-table-holder">
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Obraz</th>
+            <th>Name</th>
+            <th>Size</th>
+            <th>Type</th>
+            <th></th>
+            <th></th>
+            <th></th>
+        </tr>
+        {{#each fileList}}
+        <tr>
+            <td>{{this.id}}</td>
+            <td><span class="fiv-viv fiv-icon-{{this.icon_name}}"></span></td>
+            <td>{{this.name}}</td>
+            <td>{{this.size}}</td>
+            <td>{{this.type}}</td>
+            <td><a href="/files/{{this.id}}/delete">DELETE</a></td>
+            <td><a href="/files/{{this.id}}/info">INFO</a></td>
+            <td><a href="/files/{{this.id}}/download">DOWNLOAD</a></td>
+        </tr>
+        {{/each}}
+    </table>
+    </div>
+</main>
+</div>
+
+<link rel="stylesheet" href="https://rawcdn.githack.com/dmhendricks/file-icon-vectors/master/dist/file-icon-vivid.min.css" />

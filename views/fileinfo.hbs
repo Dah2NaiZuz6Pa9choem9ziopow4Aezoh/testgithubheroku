@@ -1,0 +1,36 @@
+<div class="app-holder">
+<nav>
+    <a href="/">Upload</a>
+    <a href="/files">File Manager</a>
+</nav>
+<main class="file-uploader">
+    <h1>Informacje</h1>
+    <div>
+        <span>
+            <strong>Nazwa: </strong>
+            {{info.name}}
+        </span><br/>
+        <span>
+            <strong>Rozmiar: </strong>
+            {{info.size}}
+        </span><br/>
+        <span>
+            <strong>Moment utworzenia: </strong>
+            {{info.saveDate}}
+        </span><br/>
+        <span>
+            <strong>Rodzaj: </strong>
+            {{info.type}}
+        </span><br/>
+        <span>
+            <strong>Nazwa na dysku: </strong>
+            {{info.diskName}}
+        </span><br/>
+        <span>
+            <strong>ID: </strong>
+            {{info.id}}
+        </span>
+    </div>
+        <a href="/files" style="color: white;">Powrót do listy</a>
+</main>
+</div>
